@@ -1,6 +1,7 @@
 import { Component,ViewChild,ElementRef } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
+import { HomeModel } from '../../model/Home-model';
+import {CallBack} from "../../Interface/Index";
 
 @Component({
   selector: 'page-home',
@@ -9,14 +10,16 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   @ViewChild("leftContent") leftContent:ElementRef;
   @ViewChild("rightContent") rightContent:ElementRef;
-  constructor(public navCtrl: NavController) {
-    this.init();
-  }
-  init(){
-    console.log(this.leftContent,this.rightContent);
+  public List:Array<{title:string}>;
+  constructor(public navCtrl: NavController,public homemodel: HomeModel) {
+    this.List = [
+    ]
   }
   ionViewDidLoad(){
-    console.log(this.leftContent,this.rightContent);
+      this.homemodel.getAllList((res)=>{
+          console.log(res);
+          this.List = res.list;
+      })
   }
 
 }
