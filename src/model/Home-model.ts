@@ -1,12 +1,12 @@
 import { HttpServer } from '../providers/http-server';
-import { CallBack } from '../interface/';
+import { ICallBack } from '../interface/Index';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class HomeModel {
-  public _callback:CallBack;
+  private _callbackMessage:ICallBack;
   constructor(public http: HttpServer) {
-      this._callback = {
+      this._callbackMessage = {
         code: 400,
         message: null,
         data:null,
@@ -14,13 +14,13 @@ export class HomeModel {
       }
   }
 
-  getAllList = (callbackFn:Function):any =>{
-    this.http.doGet('http://web.itaowan.cn/phpserver/index.php').then((res:CallBack )=>{
+  getAllList = (callback:Function):any => {
+    this.http.doGet('http://web.itaowan.cn/phpserver/index.php').then((res:ICallBack)=>{
         if(res.code==200){
-          callbackFn(res);
+          callback(res);
         }else{
-          this._callback.code = res.code;
-          callbackFn(this._callback);
+          this._callbackMessage.code = res.code;
+          callback(this._callbackMessage);
         }
     });
   }

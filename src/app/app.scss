@@ -1,16 +1,77 @@
-// http://ionicframework.com/docs/v2/theming/
-
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+.tabs-md .icon-md {
+  height:36px;
+  padding: 3px;
+}
+.tabs-md .tab-button[aria-selected=true],
+.tabs-ios .tab-button[aria-selected=true]{
+  color: #ff6c6c;
+}
+.tabs-md .tab-button[aria-selected=false],
+.tabs-ios .tab-button[aria-selected=false]{
+  color: #b8b9b9;
+}
+//page-home
+.ion-ios-mlm-home,
+.tabs-md .tab-button[aria-selected=true] .ion-md-mlm-home{
+  content: url("../assets/icon/home-active.png");
+}
+.ion-ios-mlm-home-outline,
+.tabs-md .tab-button[aria-selected=false] .ion-md-mlm-home {
+  content: url("../assets/icon/home.png");
+}
+//yure
+.ion-ios-mlm-yure,
+.tabs-md .tab-button[aria-selected=true] .ion-md-mlm-yure{
+  content: url("../assets/icon/yure-active.png");
+}
+.ion-ios-mlm-yure-outline,
+.tabs-md .tab-button[aria-selected=false] .ion-md-mlm-yure {
+  content: url("../assets/icon/yure.png");
+}
+//baozhang
+.ion-ios-mlm-baozang,
+.tabs-md .tab-button[aria-selected=true] .ion-md-mlm-baozang{
+  content: url("../assets/icon/precious-active.png");
+}
+.ion-ios-mlm-baozang-outline,
+.tabs-md .tab-button[aria-selected=false] .ion-md-mlm-baozang{
+  content: url("../assets/icon/precions.png");
+}
+.ion-ios-mlm-persona,
+.tabs-md .tab-button[aria-selected=true] .ion-md-mlm-persona{
+  content: url("../assets/icon/persona-active.png");
+}
+.ion-ios-mlm-persona-outline,
+.tabs-md .tab-button[aria-selected=false] .ion-md-mlm-persona {
+  content: url("../assets/icon/persona.png");
+}
+.position{
+    position: relative;
+}
+.text-stroke-4{
+  position: relative;
+  display: inline-block;
+  -webkit-text-stroke: 4px #fff;
+}
+.text-stroke-4::before {
+  content: attr(data-name);
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-stroke:0px #fff;
+}
+.clear{
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  };
+}
+.float-right{
+  float:right;
+}
+.float-left{
+  float:left;
+}

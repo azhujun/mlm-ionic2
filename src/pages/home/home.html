@@ -1,16 +1,119 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>Home</ion-title>
-    </ion-navbar>
-</ion-header>
-
 <ion-content>
-  <div *ngIf="List.length > 0">
-    <ul>
-      <li *ngFor="let item of List">
-        {{ item.title }}
-      </li>
-    </ul>
-  </div>
+  <section class="top-user-info">
+    <ion-img class="img-icon" width="85" height="85" src="assets/images/logo.png"></ion-img>
+    <button class="link-btn">
+     <ion-icon name="ios-add-circle-outline"></ion-icon>&nbsp;账单记录</button>
+    <h3><span class="user-name text-stroke-4" data-name="胡俊">胡俊</span></h3>
+    <p class="noMargin"><span class="text-stroke-4" data-name="我赚的米：">我赚的米：</span><span class="money text-stroke-4" data-name="￥100">￥100</span></p>
+  </section>
+  <ion-slides #myslider="" [options]="mySlideOptions" class="mlm-slide">
+    <ion-slide>
+      <img src="assets/images/banner.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/bg_head.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/banner.png" />
+    </ion-slide>
+  </ion-slides>
+  <section>
 
+    <!--1-->
+    <div class="position">
+      <div class="hr-img">
+        <span class="text-stroke-4" data-name="我发起的团">我发起的团</span>
+      </div>
+    </div>
+    <!--1-->
+    <!--2-->
+    <div class="list-box fqdt">
+      <div class="item">
+        <div class="left-image-box">
+          <ion-img width="110" height="155" src="assets/images/products_watch.jpg"></ion-img>
+          <p class="start">开：<span>2017-01-01 00:00:00</span></p>
+          <p class="end">结：<span>2017-01-01 00:00:00</span></p>
+        </div>
+        <div class="right-content">
+          <div class="title">
+            <h4>卡西欧机械表</h4>
+            <p class="describe">机械表，手感好</p>
+          </div>
+          <span class="icon-state" data-name="拼团进行"></span>
+          <p class="describe-scj">宝贝市场价：<span>￥333</span></p>
+          <p class="describe-scj">需要支持人数：<span>50</span>人</p>
+          <div class="btn-tools">
+            <div class="btn">
+              谁看了我
+            </div>
+            <div class="btn">
+              支持了我
+            </div>
+            <div class="btn">
+              继续邀请
+            </div>
+            <div class="btn">
+              继续开团
+            </div>
+          </div>
+          <div class="progress-bar">
+            <span>参团人数：</span>
+            <div class="progress">
+              <span #progress="">60%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--2-->
+    <!--3-->
+    <div class="position">
+      <div class="hr-img">
+        <span class="text-stroke-4" data-name="预热的团">预热的团</span>
+      </div>
+    </div>
+    <!--3-->
+    <!--4-->
+    <div class="list-box">
+      <div class="item">
+        <div class="left-image-box">
+          <ion-img width="110" height="155" src="assets/images/products_watch.jpg"></ion-img>
+          <p class="start">开：<span>2017-01-01 00:00:00</span></p>
+          <p class="end">结：<span>2017-01-01 00:00:00</span></p>
+        </div>
+        <div class="right-content">
+          <div class="clear">
+            <div class="title">
+              <h4>卡西欧机械表</h4>
+              <p class="describe">机械表，手感好</p>
+            </div>
+          </div>
+          <p class="describe-scj">宝贝市场价：<span>￥333</span></p>
+          <p class="describe-scj">需要支持人数：<span>50</span>人</p>
+          <button class="link-pt-bg">邀请好友来拼团</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="left-image-box">
+          <ion-img width="110" height="155" src="assets/images/products_watch.jpg"></ion-img>
+          <p class="start">开：<span>2017-01-01 00:00:00</span></p>
+          <p class="end">结：<span>2017-01-01 00:00:00</span></p>
+        </div>
+        <div class="right-content">
+          <div class="clear">
+            <div class="title">
+              <h4>卡西欧机械表</h4>
+              <p class="describe">机械表，手感好</p>
+            </div>
+          </div>
+          <p class="describe-scj">宝贝市场价：<span>￥333</span></p>
+          <p class="describe-scj">需要支持人数：<span>50</span>人</p>
+          <button class="link-pt-bg">邀请好友来拼团</button>
+          <a class="link float-left">米拉米拼团规则</a>
+          <a class="link float-right">成功拼团攻略</a>
+        </div>
+      </div>
+    </div>
+    <!--4-->
+  </section>
 </ion-content>
