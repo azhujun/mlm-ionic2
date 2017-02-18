@@ -7,7 +7,7 @@ export class HomeModel {
   private _callbackMessage:ICallBack;
   constructor(public http: HttpServer) {
       this._callbackMessage = {
-        code: 400,
+        code: 500,
         message: null,
         data:null,
         list: null
@@ -20,6 +20,7 @@ export class HomeModel {
           callback(res);
         }else{
           this._callbackMessage.code = res.code;
+          this._callbackMessage.message = res.message||'系统错误';
           callback(this._callbackMessage);
         }
     });
