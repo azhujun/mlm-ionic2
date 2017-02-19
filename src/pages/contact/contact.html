@@ -1,17 +1,122 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      宝藏
     </ion-title>
+    <button ion-button right icon-only menuToggle color="light">
+      <!--<ion-icon name="menu"></ion-icon>-->
+      更多
+    </button>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-slides #myslider [options]="mySlideOptions" class="mlm-slide">
+    <ion-slide>
+      <img src="assets/images/banner.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/bg_head.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/banner.png" />
+    </ion-slide>
+  </ion-slides>
+  <section class="mlm-tabs-bg">
+    <div class="title-bar"></div>
+    <div class="mlm-tabs">
+      <div class="mlm-tabs-list">
+        <div class="mlm-tab bg1"></div>
+        <div class="mlm-tab bg2"></div>
+        <div class="mlm-tab bg3"></div>
+        <div class="mlm-tab bg4"></div>
+      </div>
+      <div class="mlm-tabs-list">
+        <div class="mlm-tab bg5"></div>
+        <div class="mlm-tab bg6"></div>
+        <div class="mlm-tab bg7"></div>
+        <div class="mlm-tab bg8"></div>
+      </div>
+    </div>
+  </section>
+  <div class="timer">
+    <div class="timer-item">
+      <p>12:00</p>
+      <p>已结束</p>
+    </div>
+    <div class="timer-item active">
+      <p>12:00</p>
+      <p>已结束</p>
+    </div>
+    <div class="timer-item">
+      <p>12:00</p>
+      <p>已结束</p>
+    </div>
+    <div class="timer-item">
+      <p>12:00</p>
+      <p>已结束</p>
+    </div>
+    <div class="timer-item">
+      <p>12:00</p>
+      <p>已结束</p>
+    </div>
+  </div>
+  <section class="mlm-list-bg">
+    <div class="mlm-item">
+      <ion-img class="image-box" src="assets/images/bg_baby_07.jpg"></ion-img>
+      <div class="content">
+        <p class="mlm-item-title">智能汽车</p>
+        <div class="mlm-item-pri">
+          ￥130&nbsp;<span class="mlm-item-num">剩余数量：<i>52</i></span>
+        </div>
+        <div class="mlm-item-footer">
+          结束时间：<span class="mlm-item-footer-time">13:31:32</span>
+          <button class="btn right">我要开团</button>
+          <span class="right cfd4">需要支持人数<i>10</i>人</span>
+        </div>
+      </div>
+    </div>
+    <div class="mlm-item">
+      <ion-img class="image-box" src="assets/images/bg_baby_07.jpg"></ion-img>
+      <div class="content">
+        <p class="mlm-item-title">智能汽车</p>
+        <div class="mlm-item-pri">
+          ￥130&nbsp;<span class="mlm-item-num">剩余数量：<i>52</i></span>
+        </div>
+        <div class="mlm-item-footer">
+          结束时间：<span class="mlm-item-footer-time">13:31:32</span>
+          <button class="btn right">我要开团</button>
+          <span class="right cfd4">需要支持人数<i>10</i>人</span>
+        </div>
+      </div>
+    </div>
+    <div class="mlm-item">
+      <ion-img class="image-box" src="assets/images/bg_baby_07.jpg"></ion-img>
+      <div class="content">
+        <p class="mlm-item-title">智能汽车</p>
+        <div class="mlm-item-pri">
+          ￥130&nbsp;<span class="mlm-item-num">剩余数量：<i>52</i></span>
+        </div>
+        <div class="mlm-item-footer">
+          结束时间：<span class="mlm-item-footer-time">13:31:32</span>
+          <button class="btn right">我要开团</button>
+          <span class="right cfd4">需要支持人数<i>10</i>人</span>
+        </div>
+      </div>
+    </div>
+    <div class="mlm-item">
+      <ion-img class="image-box" src="assets/images/bg_baby_07.jpg"></ion-img>
+      <div class="content">
+        <p class="mlm-item-title">智能汽车</p>
+        <div class="mlm-item-pri">
+          ￥130&nbsp;<span class="mlm-item-num">剩余数量：<i>52</i></span>
+        </div>
+        <div class="mlm-item-footer">
+          结束时间：<span class="mlm-item-footer-time">13:31:32</span>
+          <button class="btn right">我要开团</button>
+          <span class="right cfd4">需要支持人数<i>10</i>人</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </ion-content>

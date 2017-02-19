@@ -5,10 +5,12 @@
 .tabs-md .tab-button[aria-selected=true],
 .tabs-ios .tab-button[aria-selected=true]{
   color: #ff6c6c;
+  background: #ffe7e7;
 }
 .tabs-md .tab-button[aria-selected=false],
 .tabs-ios .tab-button[aria-selected=false]{
   color: #b8b9b9;
+  background: #dbdfe0;
 }
 //page-home
 .ion-ios-mlm-home,
@@ -61,6 +63,9 @@
   left: 0;
   top: 0;
   -webkit-text-stroke:0px #fff;
+}
+i{
+  font-style:normal;
 }
 .clear{
   &:after{
