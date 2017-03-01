@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
 import { HomeModel } from '../../model/Home-model';
+import { ShowmePage } from '../showme/showme';
 
 @Component({
   selector: 'page-home',
@@ -24,11 +25,15 @@ export class HomePage {
   ionViewDidLoad(){
       this.homemodel.getAllList((res)=>{
           console.log(res);
-          this.List = res.list;
+          // this.List = res.list;
       })
   }
+
+  goToPage(){
+      this.navCtrl.push(ShowmePage,{id:1});
+
+  }
   ngOnInit(){//页面加载完成后自己调用
-    console.log('over');
     this.progress.nativeElement.style.width = '60%';
   }
 
