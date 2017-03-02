@@ -183,5 +183,18 @@ page-wholookme {
   .hr{
     margin-top: 10px;
   }
+  ul{
+    margin-top:2rem;
+  }
+
+  li {
+    padding:  10px;
+    display: flex;
+    color:#848484;
+    &:nth-child(2n - 1){
+      background-color: #ff79a2;
+      color:#fff;
+    }
+  }
 }
 
