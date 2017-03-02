@@ -9,7 +9,7 @@ import { MyHomePage } from  '../pages/my-home/my-home';
 import { HttpServer } from '../providers/http-server';
 import { HomeModel } from '../model/Home-model';
 import { ShowmePage } from '../pages/showme/showme';
-
+import { WholookmePage } from '../pages/wholookme/wholookme'
 @NgModule({
   declarations: [
     MyApp,
@@ -18,7 +18,8 @@ import { ShowmePage } from '../pages/showme/showme';
     HomePage,
     TabsPage,
     MyHomePage,
-    ShowmePage
+    ShowmePage,
+    WholookmePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -31,7 +32,8 @@ import { ShowmePage } from '../pages/showme/showme';
     HomePage,
     TabsPage,
     MyHomePage,
-    ShowmePage
+    ShowmePage,
+    WholookmePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},HttpServer,HomeModel]
 })

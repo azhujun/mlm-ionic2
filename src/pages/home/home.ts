@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
 import { HomeModel } from '../../model/Home-model';
 import { ShowmePage } from '../showme/showme';
+import { WholookmePage } from '../wholookme/wholookme'
 
 @Component({
   selector: 'page-home',
@@ -29,8 +30,15 @@ export class HomePage {
       })
   }
 
-  goToPage(){
-      this.navCtrl.push(ShowmePage,{id:1});
+  goToPage(page){
+      switch (page){
+        case 'showme':
+          this.navCtrl.push(ShowmePage, {id:1});
+        break;
+        case 'wholookme':
+          this.navCtrl.push(WholookmePage, {id:1});
+        break;
+      }
 
   }
   ngOnInit(){//页面加载完成后自己调用

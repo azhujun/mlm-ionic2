@@ -1,4 +1,4 @@
-page-showme {
+page-wholookme {
   ion-header{
     .toolbar{
       .toolbar-background{
@@ -87,18 +87,26 @@ page-showme {
       z-index: 101;
     }
   }
-  ul{
-    margin-top:2rem;
-  }
 
-  li {
-    padding:  10px;
-    display: flex;
-    color:#848484;
-    &:nth-child(2n - 1){
-      background-color: #ff79a2;
-      color:#fff;
-    }
+  .row{
+     display: flex;
+     height: 120px;
+     padding: 0 17px;
+     .imagebox{
+       flex: 1;
+       height: 110px;
+       margin-right: 25px;
+       text-align: center;
+       .img{
+         height: 80px;
+         width: 80px;
+         border: 2px solid #ffc2d2;
+         border-radius: 50%;
+       }
+     }
+     .imagebox:last-child{
+       margin: 0;
+     }
   }
 
   span.name,
@@ -172,5 +180,8 @@ page-showme {
   .positionAbs{
     position: absolute;
   }
-
+  .hr{
+    margin-top: 10px;
+  }
 }
+
