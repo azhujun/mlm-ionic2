@@ -21,6 +21,7 @@ export class WholookmePage {
     // console.log(this.navParams.data);
   }
   showTab(index){
+
     switch (index){
       case 1:
         this.showFirst = !this.showFirst;

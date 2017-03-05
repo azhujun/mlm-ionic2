@@ -9,7 +9,8 @@ import { MyHomePage } from  '../pages/my-home/my-home';
 import { HttpServer } from '../providers/http-server';
 import { HomeModel } from '../model/Home-model';
 import { ShowmePage } from '../pages/showme/showme';
-import { WholookmePage } from '../pages/wholookme/wholookme'
+import { WholookmePage } from '../pages/wholookme/wholookme';
+import { GoodsinfoPage } from '../pages/goodsinfo/goodsinfo';
 @NgModule({
   declarations: [
     MyApp,
@@ -19,7 +20,8 @@ import { WholookmePage } from '../pages/wholookme/wholookme'
     TabsPage,
     MyHomePage,
     ShowmePage,
-    WholookmePage
+    WholookmePage,
+    GoodsinfoPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -33,7 +35,8 @@ import { WholookmePage } from '../pages/wholookme/wholookme'
     TabsPage,
     MyHomePage,
     ShowmePage,
-    WholookmePage
+    WholookmePage,
+    GoodsinfoPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},HttpServer,HomeModel]
 })

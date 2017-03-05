@@ -28,7 +28,7 @@
     <!--1-->
     <!--2-->
     <div class="list-box fqdt">
-      <div class="item">
+      <div class="item" (click)="goToPage($event, 'goodsinfo')">
         <div class="left-image-box">
           <ion-img width="110" height="155" src="assets/images/products_watch.jpg"></ion-img>
           <p class="start">开：<span>2017-01-01 00:00:00</span></p>
@@ -43,10 +43,10 @@
           <p class="describe-scj">宝贝市场价：<span>￥333</span></p>
           <p class="describe-scj">需要支持人数：<span>50</span>人</p>
           <div class="btn-tools">
-            <div class="btn" (click)="goToPage('showme')" >
+            <div class="btn" (click)="goToPage($event, 'showme')" >
               谁看了我
             </div>
-            <div class="btn" (click)="goToPage('wholookme')">
+            <div class="btn" (click)="goToPage($event, 'wholookme')">
               支持了我
             </div>
             <div class="btn">
@@ -75,7 +75,7 @@
     <!--3-->
     <!--4-->
     <div class="list-box">
-      <div class="item">
+      <div class="item" (click)="goToPage($event, 'goodsinfo')">
         <div class="left-image-box">
           <ion-img width="110" height="155" src="assets/images/products_watch.jpg"></ion-img>
           <p class="start">开：<span>2017-01-01 00:00:00</span></p>

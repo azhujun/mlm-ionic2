@@ -3,7 +3,7 @@ import { NavController, Slides } from 'ionic-angular';
 import { HomeModel } from '../../model/Home-model';
 import { ShowmePage } from '../showme/showme';
 import { WholookmePage } from '../wholookme/wholookme'
-
+import { GoodsinfoPage } from '../goodsinfo/goodsinfo';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -24,22 +24,28 @@ export class HomePage {
     ]
   }
   ionViewDidLoad(){
-      this.homemodel.getAllList((res)=>{
-          console.log(res);
-          // this.List = res.list;
-      })
+      // this.homemodel.getAllList(456,(res)=>{
+      //     console.log(res);
+      //     // this.List = res.list;
+      // })
   }
 
-  goToPage(page){
-      switch (page){
-        case 'showme':
-          this.navCtrl.push(ShowmePage, {id:1});
-        break;
-        case 'wholookme':
-          this.navCtrl.push(WholookmePage, {id:1});
-        break;
-      }
+  goToPage(ev, page){
+    ev.stopPropagation();
+    switch (page){
+      case 'showme':
+        this.navCtrl.push(ShowmePage, {id:1});
+      break;
+      case 'wholookme':
+        this.navCtrl.push(WholookmePage, {id:1});
+      break;
+      case 'goodsinfo':
+        this.navCtrl.push(GoodsinfoPage)
+    }
+  }
 
+  isac(){
+    console.log(11111)
   }
   ngOnInit(){//页面加载完成后自己调用
     this.progress.nativeElement.style.width = '60%';

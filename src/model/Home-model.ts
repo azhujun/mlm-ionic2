@@ -14,7 +14,10 @@ export class HomeModel {
       }
   }
 
-  getAllList = (callback:Function):any => {
+  getAllList = (name,callback:Function):any => {
+    // this.http.doPost('http://localhost/index.php',{name:name}).then(res=>{
+    //   console.log(res);
+    // })
     // this.http.doGet('http://web.itaowan.cn/phpserver/index.php').then((res:ICallBack)=>{
     //     if(res.code==200){
     //       callback(res);
