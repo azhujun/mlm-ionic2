@@ -31,7 +31,7 @@
     <div class="timer-left">
       结束时间：<span class="time">2017-01-01 14：00</span>
     </div>
-    <div class="timer-right">
+    <div class="timer-right" (click)="CanOrder()"> 
       我要开团
     </div>
   </div>
@@ -46,5 +46,23 @@
   <div class="imgbox">
     <img src="assets/images/3.png" alt="">
   </div>
+  <div class="car">
+    <div class="goodsInfo">
+      <img src="" alt="">
+      <p>迷彩服撒电脑手机电脑卡少女的</p>
+      <p>价格</p>
+    </div>
+    <div class="scroll">
+      <div class="rows">
+        <span class="car-item" *ngFor="let item of Goods" [ngClass]="{'active': item==this.GoodsIndex}" (click)="ACTIVE_GOODS(item)">{{ item.color }}</span>
+      </div >
+      <div class="rows" *ngIf="isActiveGoods">
+        <span class="car-item" [ngClass]="{'active': size==this.GoodsIndexSize}" (click)="ACTIVE_GOODS_SIZE(size)" *ngFor="let size of isActiveGoods">{{ size }}</span>
+        <div class="number"><span class="Ibtn" (click)="plus()">+</span>{{ number }}<span class="Ibtn" (click)="jian()">-</span></div>
+        <div class="btn" (click)="addCar()">加入购物车</div>
+      </div>
+      
+    </div>
 
+  </div>
 </ion-content>
