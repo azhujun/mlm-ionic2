@@ -24,28 +24,73 @@ page-goodsinfo {
       margin-bottom: 53px;
       background: #fff;
       .goodsInfo{
-        height: 120px;
+        height: 100px;
         width: 100%;
         background: #f8f8f8;
+        padding: 8px;
+        position: relative;
+        img.img {
+            width: 80px;
+            height: 100%;
+            float: left;
+        }
+        .tit {
+            float: left;
+            width: calc(100% - 80px);
+            padding: 0 20px 0 5px;
+            margin: 0;
+            font-size: 16px;
+        }
+        .pri {
+            float: left;
+            width: calc(100% - 80px);
+            padding: 0 20px 0 5px;
+            margin: 5px 0 0 0;
+            color: #f88;
+            font-size: 14px;
+        }
       }
       .scroll{
         width: 100%;
-        height: 200px;
+        height: 180px;
         overflow: auto;
       }
       .rows{
         padding: 10px;
       }
+      .footer-btn {
+          height: 40px;
+          // box-sizing: border-box
+          padding: 5px;
+          background: #ccc;
+          text-align: center;
+          span.btn{
+            display: inline-block;
+            width: 70%;
+            height: 30px;
+            background: #f00;
+            line-height: 30px;
+            color: #fff;
+            border-radius: 5px;
+          }
+      }
       
       span.car-item {
-          display: inline-block;
+          display: block;
           padding: 2px 5px;
           border: 1px solid #dedede;
-          margin-right: 10px;
-          min-width: 60px;
+          width: calc(50% - 5px);
+          float: left;
           text-align: center;
+          margin-bottom: 10px;
           &.active{
             color: #fe243d;
+          }
+          &:nth-child(2n){
+            float: right;
+          }
+          &.noGoods{
+            color: #ccc;
           }
       }
       .Ibtn{
@@ -295,6 +340,18 @@ page-goodsinfo {
   }
   .positionAbs{
     position: absolute;
+  }
+  .close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    font-weight: 800;
+    color: #ccc;
+    font-size: 22px;
+    line-height: 20px;
   }
 
 }

@@ -13,77 +13,62 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class GoodsinfoPage {
   public Goods = null;
-  public isActiveGoods = null;
-  public GoodsCAR = [];
-  public number = 1;
   public GoodsIndex = null;
-  public GoodsIndexSize = null;
+  public showCar = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GoodsinfoPage');
     this.Goods = [
       {
-        name:'妮子大衣',
-        color:'红褐色',
-        size:{
-          s:200,
-          m:23,
-          l:46,
-          xl:55
-        }
+        attrname:'红色M号',
+        id:'1',
+        gid:'2',
+        num:'12',
+        imgpath:'img'
       },
       {
-        name:'妮子大衣',
-        color:'红色',
-        size:{
-          s:200,
-          m:23,
-          l:46,
-          xl:55
-        }
+        attrname:'红色s号',
+        id:'1',
+        gid:'2',
+        num:'0',
+        imgpath:'img'
+      },
+      {
+        attrname:'红色l号',
+        id:'1',
+        gid:'2',
+        num:'100',
+        imgpath:'img'
+      },
+      {
+        attrname:'红色xl号',
+        id:'1',
+        gid:'2',
+        num:'2',
+        imgpath:'img'
+      },
+      {
+        attrname:'红色xxl号',
+        id:'1',
+        gid:'2',
+        num:'0',
+        imgpath:'img'
       }
     ]
   }
 
-  plus(){
-    if(this.number < this.GoodsIndex.size[this.GoodsIndexSize]){
-      this.number++;
-    }else{
-      console.log('没这么多')
-    }
-  }
-  jian(){
-    if(this.number>1){
-      this.number--;
-    }
-  }
-
   ACTIVE_GOODS(item){
-    this.GoodsIndex = item;
-    let ActiveArray = [];
-    for (var key in item.size) {
-      if (item.size.hasOwnProperty(key)) {
-        ActiveArray.push(key)
-      }
+    if(item.num>0){
+      this.GoodsIndex = item;
     }
-    this.isActiveGoods=ActiveArray;
   }
-
-  addCar(){
-    this.GoodsCAR.push({
-      goodsName: this.GoodsIndex.name,
-      goodsColor: this.GoodsIndex.color,
-      goodsNumber: this.number,
-      goodsSize:this.GoodsIndexSize
-    })
-    console.log(this.GoodsCAR)
+  showCarFn(){
+    this.showCar = !this.showCar;
   }
-  ACTIVE_GOODS_SIZE(size){
-    this.GoodsIndexSize = size;
-    this.number = 1;
-  }
-  CanOrder(){
-    console.log(1)
+  JoinOrder(){
+    if(this.GoodsIndex){
+      this.showCar = false;
+    }
   }
 }
